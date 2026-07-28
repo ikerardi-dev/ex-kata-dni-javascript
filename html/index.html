@@ -9,12 +9,44 @@
 
   <div class="card">
     <h1>Calcula tu letra del DNI</h1>
-    <label for="dni">Número de DNI:</label>
-    <input type="text" id="dni" maxlength="8" placeholder="12345678">
-    <button class="card button" id="btnCalcular">Calcular</button>
-    <p id="resultado"></p>
+
+    <button class="card button" id="btnIniciar">Iniciar</button>
+
+    <div id="formulario" hidden>
+  <label for="dni">Número de DNI:</label>
+  <input type="text" id="dni" placeholder="12345678">
+  <button class="card button" id="btnCalcular">Calcular</button>
+  <button class="btn-cancelar" id="btnCerrar">Cerrar</button>
+  <p id="resultado"></p>
+</div>
+
+    <p id="mensajeFinal" hidden>El programa ha finalizado.</p>
   </div>
 
-  <script src="/js/main.js"></script>
+  <!-- Overlay de carga -->
+  <div id="loadingOverlay" class="overlay" hidden>
+    <div class="loading-content">
+      <img src="https://i.gifer.com/45Ra.gif" alt="Cargando...">
+      <button class="btn-cancelar" id="btnCancelar">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Gif central al cancelar -->
+  <div id="cancelOverlay" class="overlay" hidden>
+    <img src="https://i.gifer.com/y7.gif" alt="Cancelado" class="cancel-gif-centro">
+  </div>
+
+  <!-- Gif fijo esquina inferior derecha -->
+  <img id="cancelGifEsquina" src="https://i.gifer.com/1FA.gif" alt="Cancelado" hidden>
+
+  <!-- Overlay + Popup resultado -->
+  <div id="overlay" class="overlay" hidden>
+    <div class="popup">
+      <p id="popupTexto">Tu letra es: <span id="popupLetra"></span></p>
+      <button id="btnCerrarPopup">Cerrar</button>
+    </div>
+  </div>
+
+  <script type="module" src="/js/main.js"></script>
 </body>
 </html>
