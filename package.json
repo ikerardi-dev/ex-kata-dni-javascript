@@ -1,0 +1,11 @@
+{
+  "name": "calculadora-dni",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "11.12.1"
+  }
+}
